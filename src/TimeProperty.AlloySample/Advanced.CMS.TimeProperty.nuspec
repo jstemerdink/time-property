@@ -21,8 +21,9 @@
   </metadata>
   <files>
     <file src="bin\AdvancedCms.TimeProperty.dll" target="lib\net45\" />
-    <file src="..\..\buildoutput\advancedcms-timeproperty.zip" target="content\modules\_protected\advancedcms-timeproperty\" />
+    <file src="..\..\buildoutput\advancedcms-timeproperty\advancedcms-timeproperty.zip" target="content\modules\_protected\advancedcms-timeproperty\" />
     <file src="modules\_protected\advancedcms-timeproperty\web.config" target="content\modules\_protected\advancedcms-timeproperty\" />
     <file src="web.config.transform" target="content" />
+    <file src="readme.txt" target="" />
   </files>
 </package>
