@@ -27,7 +27,10 @@ function ZipCurrentModule
     #Remove-Item $version -Force -Recurse
 }
 
-Remove-Item "$workingDirectory\buildoutput\advancedcms-timeproperty" -Force -Recurse
+$oldPackageDirectory = "$workingDirectory\buildoutput\advancedcms-timeproperty";
+if (Test-Path $oldPackageDirectory) {
+	Remove-Item $oldPackageDirectory -Force -Recurse
+}
 
 Set-Location "$workingDirectory\src"
 msbuild /p:Configuration=Release
