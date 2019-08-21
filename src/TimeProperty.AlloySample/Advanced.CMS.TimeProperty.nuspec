@@ -11,7 +11,7 @@
     <releaseNotes/>
     <copyright>Copyright 2019</copyright>
     <tags>editing timespan time</tags>
-    <license type="expression">Apache 2.0</license>
+    <license type="expression">Apache-2.0</license>
     <iconUrl>https://raw.githubusercontent.com/advanced-cms/advanced-reviews/master/assets/logo.png</iconUrl>
     <projectUrl>https://github.com/advanced-cms/time-property</projectUrl>
     <dependencies>
@@ -21,8 +21,9 @@
   </metadata>
   <files>
     <file src="bin\AdvancedCms.TimeProperty.dll" target="lib\net45\" />
-    <file src="modules\_protected\advancedcms-timeproperty\advanced-cms.Reviews.zip" target="content\modules\_protected\advanced-cms.Reviews\" />
-    <file src="modules\_protected\advancedcms-timeproperty\web.config" target="content\modules\_protected\advanced-cms.Reviews\" />
+    <file src="..\..\buildoutput\advancedcms-timeproperty\advancedcms-timeproperty.zip" target="content\modules\_protected\advancedcms-timeproperty\" />
+    <file src="modules\_protected\advancedcms-timeproperty\web.config" target="content\modules\_protected\advancedcms-timeproperty\" />
     <file src="web.config.transform" target="content" />
+    <file src="readme.txt" target="" />
   </files>
 </package>
