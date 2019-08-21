@@ -7,3 +7,9 @@ public class TestPage : PageData
     [BackingType(typeof(AdvancedCms.TimeProperty.TimeProperty))]
     public virtual TimeSpan? Time1 { get; set; }
 }
+
+To render property in view mode you can use PropertyFor with TimeSpan tag:
+
+@Html.PropertyFor(x => x.CurrentPage.Time1, new { Tag = "TimeSpan" })
+
+More configuration options can be found in the documentation: https://github.com/advanced-cms/time-property
