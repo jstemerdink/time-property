@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <CmsUIVersion>12.1.0</CmsUIVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Update="EPiServer.CMS.UI.Core" Version="$(CmsUIVersion)"/>
+        <PackageReference Update="EPiServer.CMS" Version="$(CmsUIVersion)"/>
+    </ItemGroup>
+</Project>

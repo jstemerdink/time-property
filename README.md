@@ -1,7 +1,7 @@
 ![Advanced CMS](assets/logo.png "Advanced CMS")
 
 # time-property
-Episerver property used to store time between 0-24 hours for Episerver v11.x
+Episerver property used to store time between 0-24 hours
 
 Property is stored in the model as a [Timespan](https://docs.microsoft.com/en-us/dotnet/api/system.timespan) type.
 It's using [dijit/form/TimeTextBox](https://dojotoolkit.org/reference-guide/1.10/dijit/form/TimeTextBox.html) as an editor in Edit Mode.
@@ -19,7 +19,7 @@ Then add new TimeSpan property to your content model. The property needs to be a
 [ContentType(GUID = "AREDS8A41-5C8C-G3PJ-8F74-320ZF3DE8227")]
 public class TestPage : PageData
 {
-    [BackingType(typeof(AdvancedCms.TimeProperty.TimeProperty))]
+    [BackingType(typeof(Advanced.CMS.TimeProperty.TimeProperty))]
     public virtual TimeSpan? Time1 { get; set; }
 }
 ```
@@ -34,7 +34,7 @@ For example, to get 24-hour clock format:
 [ContentType(GUID = "AREDS8A41-5C8C-G3PJ-8F74-320ZF3DE8227")]
 public class TestPage : PageData
 {
-    [BackingType(typeof(AdvancedCms.TimeProperty.TimeProperty))]
+    [BackingType(typeof(Advanced.CMS.TimeProperty.TimeProperty))]
     [TimePropertySettings(TimePattern = "HH:mm")]
     public virtual TimeSpan? Time1 { get; set; }
 }
