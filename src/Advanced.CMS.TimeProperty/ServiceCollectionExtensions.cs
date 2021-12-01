@@ -1,8 +1,10 @@
 using System;
 using System.Linq;
+using EPiServer.Shell.Json;
 using EPiServer.Shell.Modules;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 
 namespace Advanced.CMS.TimeProperty
@@ -25,6 +27,8 @@ namespace Advanced.CMS.TimeProperty
             {
                 //TODO NETCORE x.Value.ViewEngines.Add(new CustomUtilViewEngine(x));
             });
+
+            services.TryAddEnumerable(ServiceDescriptor.Singleton<IJsonConverter, SystemTextTimeSpanConverter>());
 
             return services;
         }
