@@ -1,0 +1,6 @@
+﻿@model Alloy.Sample.Models.ViewModels.PageViewModel<Alloy.Sample.Models.Pages.JustTimeSpanPage>
+
+@{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
+
+DATE:
+@Html.PropertyFor(x => x.CurrentPage.Time1, new { DateFormat = "hh:mm tt", Tag = "TimeSpan" })
