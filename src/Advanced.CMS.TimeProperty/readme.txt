@@ -31,4 +31,8 @@ public class TestPage : PageData
     public virtual TimeSpan? Time1 { get; set; }
 }
 
+Nuget also contains property renderer for the view mode. You need to use PropertyFor and TimeSpan tag:
+
+@Html.PropertyFor(x => x.CurrentPage.Time1, new { Tag = "TimeSpan" })
+
 Full documentation can be found here: https://github.com/advanced-cms/time-property
