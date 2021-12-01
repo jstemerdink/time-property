@@ -17,6 +17,7 @@
     <dependencies>
       <group targetFramework="net5.0">
         <dependency id="EPiServer.CMS.UI.Core" version="[$CmsUIVersion$, $CmsUINextMajorVersion$)" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" version="[$RuntimeVersion$, $RuntimeNextMajorVersion$)" />
       </group>
     </dependencies>
     <contentFiles>

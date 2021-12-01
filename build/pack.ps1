@@ -18,6 +18,13 @@ $cmsUIParts = $cmsUIVersion.Split(".")
 $cmsUIMajor = [int]::Parse($cmsUIParts[0]) + 1
 $cmsUINextMajorVersion = ($cmsUIMajor.ToString() + ".0.0")
 
+# Runtime compilation dependency
+$runtimeNode = $dependenciesFile.SelectSingleNode("Project/PropertyGroup/RuntimeCompilationVersion")
+$runtimeVersion = $runtimeNode.InnerText
+$runtimeParts = $runtimeVersion.Split(".")
+$runtimeMajor = [int]::Parse($runtimeParts[0]) + 1
+$runtimeNextMajorVersion = ($runtimeMajor.ToString() + ".0.0")
+
 #cleanup all by dtk folder which is used by tests
 Get-ChildItem -Path out\ -Exclude dtk | Remove-Item -Recurse -Force
 
@@ -30,6 +37,6 @@ Start-Process -NoNewWindow -Wait -FilePath $zip -ArgumentList "a", "advanced-cms
 Set-Location $workingDirectory
 
 # Packaging public packages
-dotnet pack -c $configuration /p:PackageVersion=$version /p:CmsUIVersion=$cmsUIVersion /p:CmsUINextMajorVersion=$cmsUINextMajorVersion Advanced.CMS.TimeProperty.sln
+dotnet pack -c $configuration /p:PackageVersion=$version /p:CmsUIVersion=$cmsUIVersion /p:CmsUINextMajorVersion=$cmsUINextMajorVersion /p:RuntimeVersion=$runtimeVersion /p:RuntimeNextMajorVersion=$runtimeNextMajorVersion Advanced.CMS.TimeProperty.sln
 
 Pop-Location
