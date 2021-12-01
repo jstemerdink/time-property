@@ -27,8 +27,8 @@ For example:
 [ContentType(GUID = "9CCC8A41-5C8C-4BE0-8E73-520FF3DE8267")]
 public class TestPage : PageData
 {
-    [BackingType(typeof(AdvancedCms.TimeProperty.TimeProperty))]
+    [BackingType(typeof(Advanced.CMS.TimeProperty.TimeProperty))]
     public virtual TimeSpan? Time1 { get; set; }
 }
 
-Full documentation can be found here: https://github.com/advanced-cms/advanced-reviews
+Full documentation can be found here: https://github.com/advanced-cms/time-property
