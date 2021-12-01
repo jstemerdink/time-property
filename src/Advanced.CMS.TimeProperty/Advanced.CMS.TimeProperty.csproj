@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\..\build\common.props" />
   <Import Project="..\..\build\nuspec.props" />
   <PropertyGroup>
@@ -9,5 +9,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="EPiServer.CMS.UI.Core" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\**" />
   </ItemGroup>
 </Project>

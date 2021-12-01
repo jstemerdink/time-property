@@ -2,10 +2,9 @@ using System;
 using System.Linq;
 using EPiServer.Shell.Json;
 using EPiServer.Shell.Modules;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.FileProviders;
 
 namespace Advanced.CMS.TimeProperty
 {
@@ -23,12 +22,14 @@ namespace Advanced.CMS.TimeProperty
                     }
                 });
 
-            services.Configure<IOptions<MvcViewOptions>>(x =>
-            {
-                //TODO NETCORE x.Value.ViewEngines.Add(new CustomUtilViewEngine(x));
-            });
-
             services.TryAddEnumerable(ServiceDescriptor.Singleton<IJsonConverter, SystemTextTimeSpanConverter>());
+
+            services.AddMvc().AddRazorRuntimeCompilation(options =>
+            {
+                options.FileProviders.Add(new EmbeddedFileProvider(
+                    typeof(ServiceCollectionExtensions).Assembly
+                ));
+            });
 
             return services;
         }

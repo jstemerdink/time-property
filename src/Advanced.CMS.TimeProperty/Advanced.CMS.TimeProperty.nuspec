@@ -20,15 +20,14 @@
       </group>
     </dependencies>
     <contentFiles>
-      <files include="any/any/modules/_protected/advanced-cms-time-property/advanced-cms-time-property.zip" buildAction="None" copyToOutput="true"  />      
+      <files include="any/any/modules/_protected/advanced-cms-time-property/advanced-cms-time-property.zip" buildAction="None" copyToOutput="true"  />
     </contentFiles>
   </metadata>
   <files>
     <file src="src\Advanced.CMS.TimeProperty\bin\$configuration$\Advanced.CMS.TimeProperty.dll" target="lib\net5.0\" />
-    <file src="src\Advanced.CMS.TimeProperty\bin\$configuration$\Advanced.CMS.TimeProperty.Views.dll" target="lib\net5.0\" />
 
     <file src="out\advanced-cms-time-property\advanced-cms-time-property.zip" target="contentFiles\any\any\modules\_protected\advanced-cms-time-property\" />
-    
+
     <file src="build\CopyZipFiles.targets" target="build\net5.0\Advanced.CMS.TimeProperty.targets" />
     <file src="src\Advanced.CMS.TimeProperty\readme.txt" target="" />
     <file src="assets\logo.png" target="" />
