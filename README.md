@@ -1,5 +1,9 @@
 ![Advanced CMS](assets/logo.png "Advanced CMS")
 
+>> This is about .NET CORE 5 version. If you are interested about .NET FRAMEWORK 4 please visit https://github.com/advanced-cms/time-property/blob/net4_master/README.md
+
+[![Build .net core](https://github.com/advanced-cms/time-property/actions/workflows/time-property-dotnet-core.yml/badge.svg)](https://github.com/advanced-cms/time-property/actions/workflows/time-property-dotnet-core.yml)
+
 # time-property
 Episerver property used to store time between 0-24 hours
 
