@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A1272902
 		build\nuspec.props = build\nuspec.props
 		.github\workflows\time-property-dotnet-core.yml = .github\workflows\time-property-dotnet-core.yml
 		NuGet.config = NuGet.config
+		global.json = global.json
 	EndProjectSection
 EndProject
 Global
