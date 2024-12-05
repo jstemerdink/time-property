@@ -65,3 +65,19 @@ To render time with custom format use `DateFormat` property:
 ```
 
 ![Preview unpublished content](assets/documentation/timespan_view_mode_renderer_with_format.png "Preview unpublished content")
+
+### IList usage
+When used in a model that is used in an IList you will need to add the following to the property, if the picker is not picked up
+
+```csharp
+[ClientEditor(ClientEditingClass = "advanced-cms-time-property/TimeEditor")]
+```
+
+So it would become
+
+```chsarp
+[BackingType(typeof(Advanced.CMS.TimeProperty.TimeProperty))]
+[TimePropertySettings(TimePattern = "HH:mm")]
+[ClientEditor(ClientEditingClass = "advanced-cms-time-property/TimeEditor")]
+public virtual TimeSpan? Time1 { get; set; }
+```
